@@ -13,6 +13,8 @@ const List = () => {
         base: "https://api.openweathermap.org/data/2.5/"
     }
 
+    console.log(weather)
+
     const searchPressed = () => {
         fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
@@ -34,7 +36,7 @@ const List = () => {
                         <button onClick={searchPressed} className='w-min h-min ml-10 cursor-pointer'>
                             <FontAwesomeIcon icon={faMagnifyingGlass}/>
                         </button>
-                        <input type="text" className='bg-transparent w-full outline-none px-10 text-lg font-semibold' placeholder='Enter City Here . . . ' onChange={(e) => setSearch(e.target.value)}/>
+                        <input type="text" className='bg-transparent w-full outline-none px-10 text-lg font-semibold' placeholder='Enter City Here . . . ' onChange={(e) => setSearch(e.target.value)} onKeyDown={(e) => e.key === "Enter" ? searchPressed() : ""}/>
                     </div>
                 </div>
 

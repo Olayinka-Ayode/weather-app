@@ -7,7 +7,8 @@ module.exports = {
         Kadwa: 'Kadwa'
       },
       colors: {
-        skyBlue: '#A8E9E4'
+        skyBlue: '#A8E9E4',
+        fadedBlue: 'rgba(168, 233, 228, 0.2)'
       }
     },
   },
