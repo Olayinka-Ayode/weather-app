@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+
+.App{
+  height: 100vh;
+  background: linear-gradient(45deg, #FFF 0%, #17f318 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button{
+  background: linear-gradient(60deg, #FFF 0%, #17f318 100%);
+  border-radius: 100px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  transition-duration: .3s;
+}
+
+.button:hover{
+  transition-duration: 1s;
+}
+
+.arrow{
+  width: 15px;
+}
+
+.content-list{
+  background: linear-gradient(60deg, #FFF 0%, #17f318 100%);
+  height: 100vh;
+}
+
+.input{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.weather-group{
+  background: rgba(70, 255, 150, 0.4);
 }
